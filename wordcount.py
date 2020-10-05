@@ -5,14 +5,11 @@ def word_count(filename):
     word_counts = {}
     #iterate through each line in the file
     for line in test:
-    #we want to get each word
-    #
-    #word_counts[word] = word_counts.get(word, 0) + 1
+    #we want to get a list of words
+        words = line.split(" ")
+    #iterate through each word 
+        for word in words:
+            #check to see if the word is in the dic; if not add 1
+           word_counts[word] = word_counts.get(word, 0) + 1
     #return the dictionary
-
-
-#word_counts = {}
-#for word in words:
-#letter_counts[word] = letter_counts.get(word, 0) + 1
-#return word_counts
-# 
+    return word_counts
