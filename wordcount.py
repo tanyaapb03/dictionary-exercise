@@ -13,3 +13,17 @@ def word_count(filename):
            word_counts[word] = word_counts.get(word, 0) + 1
     #return the dictionary
     return word_counts
+
+
+def count_words(filename):
+    file = open(filename)
+    letter_counts = {}
+    for line in file:
+        line = line.rstrip('\n')
+        words = line.split(" ")
+        for word in words:
+        #     print(word)
+            word = word.lower()
+            word = word.strip('?,.')
+            letter_counts[word] = letter_counts.get(word, 0) + 1
+    return letter_counts
